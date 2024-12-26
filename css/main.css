@@ -69,6 +69,45 @@ article img {
   border-radius: 1.9rem;
 }
 
+section {
+  width: 100%;
+  height: auto;
+  padding: 6rem;
+}
+section h2 {
+  color: #7C6A0A;
+  font-size: 2rem;
+}
+section .product_salud h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+
+.card {
+  width: 15vw;
+  height: auto;
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.heart span {
+  display: inline-block;
+  background-image: url(/asessts/img/products/heart.png);
+}
+
+.imagen_product {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url(/asessts/img/products/toothbrush.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
 footer {
   background-color: #FA9500;
   width: 100%;
