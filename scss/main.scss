@@ -3,49 +3,49 @@ $secondary-color: #FFDAC6;
 $tertiary-color: #BABD8D;
 $background: #FA9500;
 $primary-text-color: #7C6A0A;
-$font-stack:'IBM Plex Sans' , sans-serif; 
+$font-stack: 'IBM Plex Sans', sans-serif;
 $paragraph: 2rem;
 
 
-body{
+body {
     margin: 0;
-    padding:0;
+    padding: 0;
     background-color: $primary-color;
 }
 
 
 html {
     font-size: 62.5%;
-    font-family:$font-stack;
-  }
+    font-family: $font-stack;
+}
 
-nav { 
+nav {
     width: auto;
     padding: 1.3rem;
     display: flex;
     justify-content: space-between;
     color: $primary-text-color;
 
-    
-p {
-    font-size: $paragraph;
-    padding-left: 3rem;
+
+    p {
+        font-size: $paragraph;
+        padding-left: 3rem;
+    }
+
+    .icons {
+        display: flex;
+        gap: 15px;
+
+
+        button {
+            background: none;
+            border-style: none;
+        }
+    }
 }
 
-.icons {
-    display: flex;
-    gap:15px;
 
-
-button{
-    background: none;
-    border-style: none;
-}
-}
-}
-
-
-article{
+article {
     display: flex;
     justify-content: space-between;
     width: auto;
@@ -53,86 +53,128 @@ article{
     padding-left: 4.5rem;
     padding-right: 4.5rem;
 
-.main_information{
-    display: flex;
-    flex-direction: column;
-    padding-top: 13rem;
-    gap: 3rem;
-   } 
+    .main_information {
+        display: flex;
+        flex-direction: column;
+        padding-top: 13rem;
+        gap: 3rem;
+    }
 
- h1{
-    font-size: 4.5rem;
-    padding: 0;
-    margin: 0;
- }   
-p{
-    font-size: 3rem;
-    text-align: left;
-}
+    h1 {
+        font-size: 4.5rem;
+        padding: 0;
+        margin: 0;
+    }
 
-button{
-    width: 12vw;
-    padding: 2rem;
-    background-color: $background;
-    border-radius: 5rem;
-    border-style: none;
-    color: white;
-    font-size: 1.6rem;
-}
+    p {
+        font-size: 3rem;
+        text-align: left;
+    }
 
-.main_img{
-    padding-top: 5.0rem;
-}
+    button {
+        width: 12vw;
+        padding: 2rem;
+        background-color: $background;
+        border-radius: 5rem;
+        border-style: none;
+        color: white;
+        font-size: 1.6rem;
+    }
 
-img{
-    width: 25vw;
-    border-radius: 1.9rem;
-}
+    .main_img {
+        padding-top: 5.0rem;
+    }
+
+    img {
+        width: 25vw;
+        border-radius: 1.9rem;
+    }
 }
 
 section {
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 6rem;
+    
 
-h2{
-    color: $primary-text-color;
-    font-size: 2rem;
-    }
-
-.product_salud{
-    h2{
+    h2 {
+        color: $primary-text-color;
+        font-size: 2rem;
         font-weight: 300;
-        padding-bottom: 60px;
     }
-}  
-}
-.card{
-     width: 15vw;
-     height: auto;
-     background-color: $secondary-color;
-     color: $primary-text-color;
-     padding: 20px;
-     border-radius: 6px;
-}
 
-.heart span{
-    display: inline-block;
-    background-image: url(/asessts/img/products/heart.png);
-}
-.imagen_product{
-    width: 100%;
-    height: 200px;
-    margin: 0 auto;
-    background-image:url(/asessts/img/products/toothbrush.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-}
+    h3 {
+        font-family: $font-stack;
+        font-weight: 600;
+        font-size: medium;
+    }
+
+    p {
+        font-family: $font-stack;
+        font-weight: 400;
+        font-size: small;
+    }
 
 
-footer{
+    .product_salud {
+        h2 {
+            padding-bottom: 60px;
+        }
+    }
+
+    .cards_section {
+        display: flex;
+        justify-content: space-around;
+        gap: 100px;
+        row-gap: 50px;
+        flex-wrap: wrap;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+
+    .card {
+        position: relative;
+        min-width: 53px;
+        max-width: 250px;
+        height: 450px;
+        background-color: $secondary-color;
+        color: $primary-text-color;
+        padding: 20px;
+        border-radius: 6px;
+        text-align: center;
+        background-size: cover;
+    }
+
+    .heart {
+        color: #7C6A0A;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: inline-block;
+        background-image: url("/assets/img/heart.png");
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .imagen_product {
+        margin-top: 5vh;
+        width: auto;
+        height: 50vh;
+        background-image: url("/assets/img/products/toothbrush.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+}
+
+
+footer {
 
     background-color: $background;
     width: 100%;
