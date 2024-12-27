@@ -121,7 +121,7 @@ section .heart {
   top: 10px;
   right: 10px;
   display: inline-block;
-  background-image: url("/assets/img/heart.png");
+  background-image: url("assets/img/heart.png");
   width: 30px;
   height: 30px;
   background-size: cover;
@@ -131,7 +131,7 @@ section .imagen_product {
   margin-top: 5vh;
   width: auto;
   height: 50vh;
-  background-image: url("/assets/img/products/toothbrush.jpg");
+  background-image: url("assets/img/products/toothbrush.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
