@@ -76,8 +76,9 @@ section {
 }
 section h2 {
   color: #7C6A0A;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 3rem;
+  font-weight: 400;
+  padding-top: 40px;
 }
 section h3 {
   font-family: "IBM Plex Sans", sans-serif;
@@ -89,12 +90,12 @@ section p {
   font-weight: 400;
   font-size: small;
 }
-section .product_salud h2 {
+section .product_salud h2, section .product_hogar h2 {
   padding-bottom: 60px;
 }
 section .cards_section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 100px;
   row-gap: 50px;
   flex-wrap: wrap;
@@ -137,6 +138,9 @@ section .imagen_product {
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+section .product_hogar {
+  width: 100%;
 }
 
 footer {

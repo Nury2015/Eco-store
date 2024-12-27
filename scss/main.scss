@@ -27,12 +27,12 @@ nav {
     color: $primary-text-color;
 
 
-    p {
+ p {
         font-size: $paragraph;
         padding-left: 3rem;
     }
 
-    .icons {
+.icons {
         display: flex;
         gap: 15px;
 
@@ -99,8 +99,9 @@ section {
 
     h2 {
         color: $primary-text-color;
-        font-size: 2rem;
-        font-weight: 300;
+        font-size: 3rem;
+        font-weight: 400;
+        padding-top: 40px;
     }
 
     h3 {
@@ -118,13 +119,14 @@ section {
 
     .product_salud {
         h2 {
+         
             padding-bottom: 60px;
         }
     }
 
     .cards_section {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 100px;
         row-gap: 50px;
         flex-wrap: wrap;
@@ -170,6 +172,11 @@ section {
         background-repeat: no-repeat;
         border-radius: 5px;
         object-fit: cover;
+    }
+
+    .product_hogar{
+    @extend .product_salud;
+     width: 100%;
     }
 }
 
