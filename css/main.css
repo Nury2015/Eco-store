@@ -82,12 +82,12 @@ section h2 {
 }
 section h3 {
   font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: medium;
 }
 section p {
   font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: small;
 }
 section .product_salud h2, section .product_hogar h2 {
@@ -127,11 +127,10 @@ section .heart {
   background-size: cover;
   background-position: center;
 }
-section .imagen_product {
+section .imagen_product img {
   margin-top: 5vh;
-  width: auto;
+  width: 16vw;
   height: 50vh;
-  background-image: url("../assets/img/products/toothbrush.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -139,8 +138,12 @@ section .imagen_product {
   -o-object-fit: cover;
      object-fit: cover;
 }
-section .product_hogar {
-  width: 100%;
+section .product_hogar .card {
+  background-color: #BABD8D;
+  color: white;
+}
+section .product_hogar .heart {
+  color: white;
 }
 
 footer {

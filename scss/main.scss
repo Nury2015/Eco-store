@@ -27,12 +27,12 @@ nav {
     color: $primary-text-color;
 
 
- p {
+    p {
         font-size: $paragraph;
         padding-left: 3rem;
     }
 
-.icons {
+    .icons {
         display: flex;
         gap: 15px;
 
@@ -95,7 +95,7 @@ section {
     width: auto;
     height: auto;
     padding: 6rem;
-    
+
 
     h2 {
         color: $primary-text-color;
@@ -106,20 +106,20 @@ section {
 
     h3 {
         font-family: $font-stack;
-        font-weight: 600;
+        font-weight: 700;
         font-size: medium;
     }
 
     p {
         font-family: $font-stack;
-        font-weight: 400;
+        font-weight: 500;
         font-size: small;
     }
 
 
     .product_salud {
         h2 {
-         
+
             padding-bottom: 60px;
         }
     }
@@ -162,11 +162,10 @@ section {
 
     }
 
-    .imagen_product {
+    .imagen_product  img{
         margin-top: 5vh;
-        width: auto;
+        width:16vw;
         height: 50vh;
-        background-image: url("../assets/img/products/toothbrush.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -175,10 +174,18 @@ section {
     }
 
     .product_hogar{
-    @extend .product_salud;
-     width: 100%;
-    }
+		@extend .product_salud;
+		.card{
+			background-color: $tertiary-color;
+			color:white;
+        }
 
+        .heart {
+            color: white;
+        }
+    
+    }
+   
 
 }
 
