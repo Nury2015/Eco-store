@@ -13,7 +13,9 @@ nav {
   width: auto;
   padding: 1.3rem;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   color: #7C6A0A;
 }
 nav p {
@@ -31,7 +33,9 @@ nav .icons button {
 
 article {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: auto;
   color: #7C6A0A;
   padding-left: 4.5rem;
@@ -40,6 +44,8 @@ article {
 article .main_information {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   padding-top: 13rem;
   gap: 3rem;
 }
@@ -53,13 +59,20 @@ article p {
   text-align: left;
 }
 article button {
+  background: none;
+  border-style: none;
+}
+article button {
   width: 12vw;
   padding: 2rem;
   background-color: #FA9500;
   border-radius: 5rem;
-  border-style: none;
   color: white;
   font-size: 1.6rem;
+}
+article button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
 }
 article .main_img {
   padding-top: 5rem;
@@ -95,7 +108,9 @@ section .product_salud h2, section .product_hogar h2 {
 }
 section .cards_section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 100px;
   row-gap: 50px;
   flex-wrap: wrap;
@@ -142,8 +157,59 @@ section .product_hogar .card {
   background-color: #BABD8D;
   color: white;
 }
-section .product_hogar .heart {
+section .product_hogar .card .heart {
   color: white;
+}
+
+.info_nosotros {
+  padding-bottom: 40px;
+}
+.info_nosotros h2 {
+  font-weight: 100;
+  padding-bottom: 60px;
+}
+.info_nosotros .info_innovation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.info_nosotros .earth, .info_nosotros .ideas {
+  width: 50px;
+  display: flex;
+  gap: 20px;
+  color: #E86424;
+}
+.info_nosotros .earth img, .info_nosotros .ideas img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.info_nosotros .earth p, .info_nosotros .ideas p {
+  text-align: center;
+  font-size: 2rem;
+}
+.gallery {
+  margin: 10px;
+}
+.gallery .gallery_images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery .gallery_images img {
+  padding: 20px;
+  width: 30vw;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 1px 35%;
+     object-position: 1px 35%;
+  border-radius: 38px;
+}
+.gallery .gallery_images img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
 }
 
 footer {

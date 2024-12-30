@@ -7,6 +7,21 @@ $font-stack: 'IBM Plex Sans', sans-serif;
 $paragraph: 2rem;
 
 
+
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border-style: none;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -22,8 +37,7 @@ html {
 nav {
     width: auto;
     padding: 1.3rem;
-    display: flex;
-    justify-content: space-between;
+    @include flexCenter(row, space-between, center);
     color: $primary-text-color;
 
 
@@ -36,26 +50,20 @@ nav {
         display: flex;
         gap: 15px;
 
-
-        button {
-            background: none;
-            border-style: none;
-        }
+        @include buttonStyle;
     }
 }
 
 
 article {
-    display: flex;
-    justify-content: space-between;
+    @include flexCenter(row, space-between, center);
     width: auto;
     color: $primary-text-color;
     padding-left: 4.5rem;
     padding-right: 4.5rem;
 
     .main_information {
-        display: flex;
-        flex-direction: column;
+        @include flexCenter(column, space-evenly, flex-start);
         padding-top: 13rem;
         gap: 3rem;
     }
@@ -71,14 +79,20 @@ article {
         text-align: left;
     }
 
+    @include buttonStyle;
+
     button {
         width: 12vw;
         padding: 2rem;
         background-color: $background;
         border-radius: 5rem;
-        border-style: none;
         color: white;
         font-size: 1.6rem;
+
+        &:hover{
+            transform: scale(1.1);
+            transition-duration: 0.3s;
+        }
     }
 
     .main_img {
@@ -125,8 +139,7 @@ section {
     }
 
     .cards_section {
-        display: flex;
-        justify-content: space-between;
+        @include flexCenter(row, space-evenly, center);
         gap: 100px;
         row-gap: 50px;
         flex-wrap: wrap;
@@ -149,7 +162,7 @@ section {
     }
 
     .heart {
-        color: #7C6A0A;
+        color: $primary-text-color;
         position: absolute;
         top: 10px;
         right: 10px;
@@ -162,9 +175,9 @@ section {
 
     }
 
-    .imagen_product  img{
+    .imagen_product img {
         margin-top: 5vh;
-        width:16vw;
+        width: 16vw;
         height: 50vh;
         background-size: cover;
         background-position: center;
@@ -173,22 +186,71 @@ section {
         object-fit: cover;
     }
 
-    .product_hogar{
-		@extend .product_salud;
-		.card{
-			background-color: $tertiary-color;
-			color:white;
-        }
 
-        .heart {
+    .product_hogar {
+        @extend .product_salud;
+
+        .card {
+            background-color: $tertiary-color;
             color: white;
-        }
-    
-    }
-   
 
+            .heart {
+                color: white;
+            }
+        }
+    }
 }
 
+.about-us{
+	padding-bottom: 60px;
+	h2{
+		font-weight: bold;
+		padding-bottom: 60px;
+	}
+	.mission-section{
+       
+		@include flexCenter(row,space-evenly,center);
+		.earth{
+			$text-color: #E86424;
+			width: 30vw;
+			display:flex;
+			gap:40px;
+			color: $text-color;
+			img{
+				object-fit: contain;
+				
+			}
+			p{
+				text-align: center;
+				font-size: $paragraph-size;
+			}
+		}
+	}
+	.innovation{
+		@extend .earth;
+	}
+}
+
+
+.gallery{
+    margin: 10px;
+    
+    .gallery_images{
+        @include flexCenter(row,  space-between, center);
+        img{
+           padding: 20px;
+            width: 30vw;
+            height: 60vh;
+            object-fit: cover;
+            object-position: 1px 35%;
+            border-radius: 38px;
+            &:hover{
+                transform: scale(1.1);
+                transition-duration: 0.3s;
+            }
+        }
+    }
+}
 
 footer {
 
