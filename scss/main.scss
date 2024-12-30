@@ -201,39 +201,43 @@ section {
     }
 }
 
-.about-us{
-	padding-bottom: 60px;
-	h2{
-		font-weight: bold;
-		padding-bottom: 60px;
-	}
-	.mission-section{
-       
-		@include flexCenter(row,space-evenly,center);
-		.earth{
-			$text-color: #E86424;
-			width: 30vw;
-			display:flex;
-			gap:40px;
-			color: $text-color;
-			img{
-				object-fit: contain;
-				
-			}
-			p{
-				text-align: center;
-				font-size: $paragraph-size;
-			}
-		}
-	}
-	.innovation{
-		@extend .earth;
-	}
-}
+.nosotros{
+   padding-top: 40px;
+   padding-bottom: 60px;
+    h2{
+        padding-bottom: 35px;
+        font-weight: bold;
+    }
+    .mission_section{
+        @include flexCenter(row,space-evenly,center );
+    .earth{
+        width: 60vw;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        color: #E86424;
+    img{
+        object-fit:contain;
+    }
+        
+    p{
+        text-align: center;
+        font-size:$paragraph;
+    }
+    }
+    }
 
+    .innovation{
+        @extend .earth;
+    }
+     
+}
 
 .gallery{
     margin: 10px;
+    h2{
+        font-weight: bold
+    }
     
     .gallery_images{
         @include flexCenter(row,  space-between, center);
@@ -252,9 +256,36 @@ section {
     }
 }
 
-footer {
+.info_encuentranos{
+    h2{
+        font-weight: bold;
+       padding: 6rem 2rem;
+    }
+    color:#E86424;
+    .maps{
+         @include flexCenter(row,center ,center );
+         padding-bottom: 50px;
 
+    }
+h3, p{
+    font-size:2rem;
+}
+}
+
+footer {
+    color:white;
     background-color: $background;
     width: 100%;
-    height: 250px;
+    height: auto;
+    padding: 40px;
+
+    h3, p{
+        font-size:2rem;
+    }
+.footer_social-img{
+    @include flexCenter(row,center,center);
+    gap: 40px;
+    padding-bottom:20px ;
+
+}
 }
