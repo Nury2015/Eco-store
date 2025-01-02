@@ -231,7 +231,8 @@ section .product_hogar .card .heart {
   align-items: center;
   padding-bottom: 50px;
 }
-.info_encuentranos h3, .info_encuentranos p {
+.info_encuentranos h3,
+.info_encuentranos p {
   font-size: 2rem;
 }
 
@@ -242,7 +243,8 @@ footer {
   height: auto;
   padding: 40px;
 }
-footer h3, footer p {
+footer h3,
+footer p {
   font-size: 2rem;
 }
 footer .footer_social-img {
@@ -252,4 +254,170 @@ footer .footer_social-img {
   align-items: center;
   gap: 40px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  nav p {
+    font-size: 1.8rem;
+    padding-left: 0;
+    text-align: center;
+  }
+  nav .icons {
+    justify-content: center;
+  }
+  article {
+    flex-direction: column;
+    text-align: center;
+  }
+  article .main_information {
+    align-items: center;
+    padding-top: 5rem;
+  }
+  article h1 {
+    font-size: 3.5rem;
+  }
+  article p {
+    font-size: 2.4rem;
+  }
+  article button {
+    width: auto;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+  article .main_img img {
+    width: 50vw;
+  }
+  .cards_section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .nosotros .mission_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nosotros .mission_section .earth, .nosotros .mission_section .innovation {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: #E86424;
+  }
+  .gallery {
+    padding: 6px;
+    width: 758px;
+  }
+  .gallery .gallery_images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery .gallery_images img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+.info_encuentranos {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem;
+  }
+  nav p {
+    font-size: 1.5rem;
+  }
+  nav .icons {
+    gap: 10px;
+  }
+  article {
+    padding: 1rem;
+  }
+  article h1 {
+    font-size: 2.5rem;
+  }
+  article p {
+    font-size: 2rem;
+  }
+  article button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  article .main_img img {
+    width: 90%;
+  }
+  section {
+    padding: 2rem;
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+  section .cards_section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  section .card {
+    height: auto;
+    padding: 1rem;
+  }
+  section .imagen_product img {
+    width: 100%;
+    height: auto;
+  }
+  .nosotros .mission_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nosotros .mission_section .earth, .nosotros .mission_section .innovation {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: #E86424;
+  }
+  .gallery .gallery_images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery .gallery_images img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .info_encuentranos {
+    display: flex;
+    align-items: center;
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  footer h3,
+  footer p {
+    font-size: 1.5rem;
+  }
+  footer .footer_social-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

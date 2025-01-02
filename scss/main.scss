@@ -89,7 +89,7 @@ article {
         color: white;
         font-size: 1.6rem;
 
-        &:hover{
+        &:hover {
             transform: scale(1.1);
             transition-duration: 0.3s;
         }
@@ -201,54 +201,61 @@ section {
     }
 }
 
-.nosotros{
-   padding-top: 40px;
-   padding-bottom: 60px;
-    h2{
+.nosotros {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    h2 {
         padding-bottom: 35px;
         font-weight: bold;
     }
-    .mission_section{
-        @include flexCenter(row,space-evenly,center );
-    .earth{
-        width: 60vw;
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        color: #E86424;
-    img{
-        object-fit:contain;
-    }
-        
-    p{
-        text-align: center;
-        font-size:$paragraph;
-    }
-    }
+
+    .mission_section {
+        @include flexCenter(row, space-evenly, center);
+
+        .earth {
+            width: 60vw;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            color: #E86424;
+
+            img {
+                object-fit: contain;
+            }
+
+            p {
+                text-align: center;
+                font-size: $paragraph;
+            }
+        }
     }
 
-    .innovation{
+    .innovation {
         @extend .earth;
     }
-     
+
 }
 
-.gallery{
+.gallery {
     margin: 10px;
-    h2{
+
+    h2 {
         font-weight: bold
     }
-    
-    .gallery_images{
-        @include flexCenter(row,  space-between, center);
-        img{
-           padding: 20px;
+
+    .gallery_images {
+        @include flexCenter(row, space-between, center);
+
+        img {
+            padding: 20px;
             width: 30vw;
             height: 60vh;
             object-fit: cover;
             object-position: 1px 35%;
             border-radius: 38px;
-            &:hover{
+
+            &:hover {
                 transform: scale(1.1);
                 transition-duration: 0.3s;
             }
@@ -256,36 +263,266 @@ section {
     }
 }
 
-.info_encuentranos{
-    h2{
+.info_encuentranos {
+    h2 {
         font-weight: bold;
-       padding: 6rem 2rem;
+        padding: 6rem 2rem;
     }
+
     color:#E86424;
-    .maps{
-         @include flexCenter(row,center ,center );
-         padding-bottom: 50px;
+
+    .maps {
+        @include flexCenter(row, center, center);
+        padding-bottom: 50px;
 
     }
-h3, p{
-    font-size:2rem;
-}
+
+    h3,
+    p {
+        font-size: 2rem;
+    }
 }
 
 footer {
-    color:white;
+    color: white;
     background-color: $background;
     width: 100%;
     height: auto;
     padding: 40px;
 
-    h3, p{
-        font-size:2rem;
+    h3,
+    p {
+        font-size: 2rem;
     }
-.footer_social-img{
-    @include flexCenter(row,center,center);
-    gap: 40px;
-    padding-bottom:20px ;
 
+    .footer_social-img {
+        @include flexCenter(row, center, center);
+        gap: 40px;
+        padding-bottom: 20px;
+
+    }
 }
+
+// Breakpoint para tablets (pantallas medianas)
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+
+        p {
+            font-size: 1.8rem;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .icons {
+            justify-content: center;
+        }
+    }
+
+    article {
+        flex-direction: column;
+        text-align: center;
+
+        .main_information {
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 2.4rem;
+        }
+
+        button {
+            width: auto;
+            padding: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .main_img img {
+            width: 50vw;
+        }
+    }
+
+    .cards_section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+
+    .nosotros{
+
+        .mission_section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+                .earth {
+                    width: 60vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 40px;
+                    color: #E86424;
+        
+
+            }
+        
+        }
+    }
+
+   
+
+    .gallery{
+        padding: 6px;
+        width: 758px;
+        .gallery_images {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 90%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+        }
+
+        
+    }
 }
+
+.info_encuentranos{
+    display: flex;
+    align-items: center;
+}
+
+    // Breakpoint para móviles (pantallas pequeñas)
+    @media (max-width: 480px) {
+        nav {
+            padding: 1rem;
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            .icons {
+                gap: 10px;
+            }
+        }
+
+        article {
+            padding: 1rem;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+
+            button {
+                width: 100%;
+                font-size: 1.2rem;
+            }
+
+            .main_img img {
+                width: 90%;
+            }
+        }
+
+        section {
+            padding: 2rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .cards_section {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .card {
+                height: auto;
+                padding: 1rem;
+            }
+
+            .imagen_product img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+       .nosotros{
+
+        .mission_section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+                .earth {
+                    width: 60vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 40px;
+                    color: #E86424;
+        
+
+            }
+        
+        }
+    }
+
+        
+    .gallery{
+        .gallery_images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 90%;
+                height: auto;
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+        }
+    }
+
+    .info_encuentranos{
+        display: flex;
+        align-items: center;
+    }
+
+
+        footer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+
+            h3,
+            p {
+                font-size: 1.5rem;
+            }
+
+            .footer_social-img {
+                @include flexCenter(column, center, center);
+                gap: 20px;
+                padding-bottom: 20px;
+        
+            }
+        }
+    }
+    
