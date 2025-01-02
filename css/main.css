@@ -231,6 +231,10 @@ section .product_hogar .card .heart {
   align-items: center;
   padding-bottom: 50px;
 }
+.info_encuentranos .maps img {
+  width: 100%;
+  padding: 20px;
+}
 .info_encuentranos h3,
 .info_encuentranos p {
   font-size: 2rem;
@@ -307,6 +311,17 @@ footer .footer_social-img {
     width: 250px;
     scroll-snap-align: start;
   }
+  .gallery .gallery_images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery .gallery_images img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
   .nosotros .mission_section {
     display: flex;
     flex-direction: column;
@@ -342,7 +357,7 @@ footer .footer_social-img {
   }
   article button {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   article .main_img img {
     width: 90%;
