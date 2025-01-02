@@ -187,17 +187,29 @@ section {
     }
 
 
+
+
     .product_hogar {
         @extend .product_salud;
 
         .card {
             background-color: $tertiary-color;
             color: white;
+            overflow: hidden;
 
             .heart {
                 color: white;
             }
         }
+
+        .card p {
+            font-size: 1.4rem;
+            /* Tamaño adecuado para móviles */
+            line-height: 1.2;
+            /* Espaciado entre líneas */
+            margin: 0;
+        }
+
     }
 }
 
@@ -275,11 +287,11 @@ section {
         @include flexCenter(row, center, center);
         padding-bottom: 50px;
 
-        img{
+        img {
             width: 100%;
             padding: 20px;
         }
-        
+
 
     }
 
@@ -290,15 +302,20 @@ section {
 }
 
 footer {
+    font-family:Arial, Helvetica, sans-serif;
     color: white;
     background-color: $background;
     width: 100%;
     height: auto;
-    padding: 40px;
+    
 
-    h3,
-    p {
+    h3, p {
         font-size: 2rem;
+    }
+
+    .footer_servicios{
+        padding-left: 20px;
+        padding-top: 20px;
     }
 
     .footer_social-img {
@@ -353,27 +370,131 @@ footer {
         }
     }
 
-    .cards_section {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        gap: 20px;
-        scroll-snap-type: x mandatory; // Asegurar un comportamiento de desplazamiento suave
-        scroll-padding: 10px; // Espaciado inicial para el snap
-        padding: 10px;
-    
-        &::-webkit-scrollbar {
-            display: none; // Ocultar la barra de desplazamiento
+
+    .section_products {
+        padding: 2rem;
+
+        h2 {
+            padding-bottom: 40rem;
+            font-size: 3rem;
         }
-    
-        .card {
-            flex: 0 0 auto;
-            width: 250px; // Ancho fijo para mantener consistencia
-            scroll-snap-align: start; // Alinear al inicio de cada tarjeta
+
+        h2 {
+            font-size: 3rem;
         }
     }
 
-    .gallery{
+     section .cards_section {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 16px;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 200px;
+            scroll-snap-align: start;
+            text-align: center;
+            border-radius: 8px;
+            padding: 8px;
+            overflow: hidden;
+        }
+
+        .imagen_product img {
+            width: auto;
+            margin-top: 8vh;
+        }
+
+        p {
+            text-align: center;
+            overflow: hidden;
+            white-space: normal;
+        }
+    }
+
+    .section_hogar {
+
+        padding: 2rem;
+
+        h2 {
+            padding-top: 0;
+            font-size: 3rem;
+        }
+    }
+
+    .cards_hogar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 16px;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        h2 {
+            padding-top: 0;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 200px;
+            scroll-snap-align: start;
+            text-align: center;
+            border-radius: 8px;
+            padding: 8px;
+            overflow: hidden;
+        }
+
+        .imagen_product img {
+            width: auto;
+            margin-top: 8vh;
+        }
+
+        p {
+            text-align: center;
+            overflow: hidden;
+            white-space: normal;
+        }
+
+    }
+
+
+
+    .gallery {
         .gallery_images {
             display: flex;
             flex-direction: column;
@@ -386,24 +507,24 @@ footer {
                 padding: 20px;
             }
         }
-        
+
     }
-    
 
 
-    .nosotros{
+    .nosotros {
 
-        .mission_section{
+        .mission_section {
             display: flex;
             flex-direction: column;
             justify-content: center;
-                .earth {
-                    width: 60vw;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 20px;
-                    color: #E86424;
+
+            .earth {
+                width: 60vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                color: #E86424;
             }
         }
     }
@@ -446,62 +567,30 @@ footer {
                 width: 90%;
             }
         }
+    
 
-        .section_products {
-            // padding: 2rem;
+    .nosotros {
 
-            h2 {
-                font-size: 2rem;
-            }
-
-            .cards_section {
-                display: flex;
-                flex-direction: row; // Asegura el scroll horizontal
-                overflow-x: auto; // Activa el scroll horizontal
-                gap: 20px;
-                padding: 10px;
-                scroll-snap-type: x mandatory; // Activar comportamiento snap
-                scroll-padding: 10px;
-            
-                &::-webkit-scrollbar {
-                    display: none; // Ocultar barra de scroll
-                }
-            
-                .card {
-                    flex: 0 0 auto; // Evita que las tarjetas cambien de tamaño
-                    width: 250px; // Ancho definido para mantener consistencia
-                    scroll-snap-align: start; // Alinea las tarjetas al inicio
-                }
-            }
-            
-
-            
-            }
-        
-       .nosotros{
-
-        .mission_section{
+        .mission_section {
             display: flex;
             flex-direction: column;
             justify-content: center;
 
 
-                .earth {
-                    width: 60vw;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 40px;
-                    color: #E86424;
-        
-
+            .earth {
+                width: 60vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                color: #E86424;
             }
-        
+
         }
     }
 
-        
-    .gallery{
+
+    .gallery {
         .gallery_images {
             display: flex;
             flex-direction: column;
@@ -514,28 +603,31 @@ footer {
                 padding: 20px;
             }
         }
-        
+
     }
 
-    
+    footer {
 
-footer {
-    width: 100%;
-    @include flexCenter(column,center,center);
-    padding: 20px;
-
-    h3, p {
-        font-size: 1.5rem;
-    }
-
-    .footer_social-img {
-        @include flexCenter(column, center, center);
-        gap: 20px;
+        .footer_servicios{
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
         padding-bottom: 20px;
+        text-align: center;
+        font-size: 1rem;
+        @include flexCenter(column, center, center);
+        }
 
+        .footer_social-img {
+             display: flex;
+             flex-direction: row;
+             gap: 20px;
+           
+        }
+
+        .footer_social-img  img{
+            width: 16px;
+        }
     }
-}
 
 }
-
-    

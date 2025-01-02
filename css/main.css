@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -156,9 +157,17 @@ section .imagen_product img {
 section .product_hogar .card {
   background-color: #BABD8D;
   color: white;
+  overflow: hidden;
 }
 section .product_hogar .card .heart {
   color: white;
+}
+section .product_hogar .card p {
+  font-size: 1.4rem;
+  /* Tamaño adecuado para móviles */
+  line-height: 1.2;
+  /* Espaciado entre líneas */
+  margin: 0;
 }
 
 .nosotros {
@@ -241,15 +250,18 @@ section .product_hogar .card .heart {
 }
 
 footer {
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   background-color: #FA9500;
   width: 100%;
   height: auto;
-  padding: 40px;
 }
-footer h3,
-footer p {
+footer h3, footer p {
   font-size: 2rem;
+}
+footer .footer_servicios {
+  padding-left: 20px;
+  padding-top: 20px;
 }
 footer .footer_social-img {
   display: flex;
@@ -294,22 +306,104 @@ footer .footer_social-img {
   article .main_img img {
     width: 50vw;
   }
-  .cards_section {
+  .section_products {
+    padding: 2rem;
+  }
+  .section_products h2 {
+    padding-bottom: 40rem;
+    font-size: 3rem;
+  }
+  .section_products h2 {
+    font-size: 3rem;
+  }
+  section .cards_section {
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 20px;
     scroll-snap-type: x mandatory;
-    scroll-padding: 10px;
-    padding: 10px;
+    gap: 16px;
+    padding: 16px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
-  .cards_section::-webkit-scrollbar {
-    display: none;
+  section .cards_section::-webkit-scrollbar {
+    height: 6px;
   }
-  .cards_section .card {
+  section .cards_section::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  section .cards_section::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  section .cards_section .card {
     flex: 0 0 auto;
-    width: 250px;
+    width: 200px;
     scroll-snap-align: start;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+  }
+  section .cards_section .imagen_product img {
+    width: auto;
+    margin-top: 8vh;
+  }
+  section .cards_section p {
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;
+  }
+  .section_hogar {
+    padding: 2rem;
+  }
+  .section_hogar h2 {
+    padding-top: 0;
+    font-size: 3rem;
+  }
+  .cards_hogar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 16px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cards_hogar::-webkit-scrollbar {
+    height: 6px;
+  }
+  .cards_hogar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  .cards_hogar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .cards_hogar h2 {
+    padding-top: 0;
+  }
+  .cards_hogar .card {
+    flex: 0 0 auto;
+    width: 200px;
+    scroll-snap-align: start;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+  }
+  .cards_hogar .imagen_product img {
+    width: auto;
+    margin-top: 8vh;
+  }
+  .cards_hogar p {
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;
   }
   .gallery .gallery_images {
     display: flex;
@@ -362,26 +456,6 @@ footer .footer_social-img {
   article .main_img img {
     width: 90%;
   }
-  .section_products h2 {
-    font-size: 2rem;
-  }
-  .section_products .cards_section {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 10px;
-  }
-  .section_products .cards_section::-webkit-scrollbar {
-    display: none;
-  }
-  .section_products .cards_section .card {
-    flex: 0 0 auto;
-    width: 250px;
-    scroll-snap-align: start;
-  }
   .nosotros .mission_section {
     display: flex;
     flex-direction: column;
@@ -406,23 +480,24 @@ footer .footer_social-img {
     margin-bottom: 20px;
     padding: 20px;
   }
-  footer {
-    width: 100%;
+  footer .footer_servicios {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-  }
-  footer h3, footer p {
-    font-size: 1.5rem;
   }
   footer .footer_social-img {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     gap: 20px;
-    padding-bottom: 20px;
+  }
+  footer .footer_social-img img {
+    width: 16px;
   }
 }/*# sourceMappingURL=main.css.map */
