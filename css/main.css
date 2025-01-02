@@ -56,8 +56,9 @@ article h1 {
   margin: 0;
 }
 article p {
+  max-width: 600px;
   font-size: 3rem;
-  text-align: left;
+  text-align: justify;
 }
 article button {
   background: none;
