@@ -348,9 +348,25 @@ footer {
     }
 
     .cards_section {
-        flex-direction: column;
-        gap: 2rem;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 20px;
+        scroll-snap-type: x mandatory; // Asegurar un comportamiento de desplazamiento suave
+        scroll-padding: 10px; // Espaciado inicial para el snap
+        padding: 10px;
+    
+        &::-webkit-scrollbar {
+            display: none; // Ocultar la barra de desplazamiento
+        }
+    
+        .card {
+            flex: 0 0 auto;
+            width: 250px; // Ancho fijo para mantener consistencia
+            scroll-snap-align: start; // Alinear al inicio de cada tarjeta
+        }
     }
+    
 
 
     .nosotros{
@@ -359,19 +375,14 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-
                 .earth {
                     width: 60vw;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 40px;
+                    gap: 20px;
                     color: #E86424;
-        
-
             }
-        
         }
     }
 
@@ -397,10 +408,6 @@ footer {
     }
 }
 
-.info_encuentranos{
-    display: flex;
-    align-items: center;
-}
 
     // Breakpoint para móviles (pantallas pequeñas)
     @media (max-width: 480px) {
@@ -437,7 +444,7 @@ footer {
             }
         }
 
-        section {
+        .section_products {
             padding: 2rem;
 
             h2 {
@@ -445,20 +452,37 @@ footer {
             }
 
             .cards_section {
-                flex-direction: column;
-                gap: 1.5rem;
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                gap: 20px;
+                scroll-snap-type: x mandatory; // Asegurar un comportamiento de desplazamiento suave
+                scroll-padding: 10px; // Espaciado inicial para el snap
+                padding: 10px;
+            
+                &::-webkit-scrollbar {
+                    display: none; // Ocultar la barra de desplazamiento
+                }
+            
+                .card {
+                    flex: 0 0 auto;
+                    width: 250px; // Ancho fijo para mantener consistencia
+                    scroll-snap-align: start; // Alinear al inicio de cada tarjeta
+                }
             }
+            
 
-            .card {
-                height: auto;
-                padding: 1rem;
-            }
+            
 
-            .imagen_product img {
+              .imagen_product img {
                 width: 100%;
                 height: auto;
             }
+            }
         }
+
+           
+        
 
        .nosotros{
 
@@ -498,10 +522,7 @@ footer {
         }
     }
 
-    .info_encuentranos{
-        display: flex;
-        align-items: center;
-    }
+ 
 
 
         footer {
@@ -524,5 +545,4 @@ footer {
         
             }
         }
-    }
     
