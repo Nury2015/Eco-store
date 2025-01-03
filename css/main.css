@@ -138,7 +138,7 @@ section .heart {
   top: 10px;
   right: 10px;
   display: inline-block;
-  background-image: url("../assets/img/heart.png");
+  background-image: url("../assets/svg/heart.svg");
   width: 30px;
   height: 30px;
   background-size: cover;
@@ -146,8 +146,8 @@ section .heart {
 }
 section .imagen_product img {
   margin-top: 5vh;
-  width: 16vw;
-  height: 50vh;
+  min-width: 16vw;
+  max-height: 50vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -308,7 +308,8 @@ footer .footer_social-img {
     width: 50vw;
   }
   .section_products {
-    padding: 2rem;
+    width: 100%;
+    padding: 16px;
   }
   .section_products h2 {
     padding-bottom: 40rem;
@@ -364,7 +365,8 @@ footer .footer_social-img {
     padding-top: 0;
     font-size: 3rem;
   }
-  .cards_hogar {
+  .cards_section {
+    width: 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -375,33 +377,33 @@ footer .footer_social-img {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
-  .cards_hogar::-webkit-scrollbar {
+  .cards_section::-webkit-scrollbar {
     height: 6px;
   }
-  .cards_hogar::-webkit-scrollbar-thumb {
+  .cards_section::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
   }
-  .cards_hogar::-webkit-scrollbar-track {
+  .cards_section::-webkit-scrollbar-track {
     background: transparent;
   }
-  .cards_hogar h2 {
+  .cards_section h2 {
     padding-top: 0;
   }
-  .cards_hogar .card {
+  .cards_section .card {
     flex: 0 0 auto;
-    width: 200px;
+    width: 255px;
     scroll-snap-align: start;
     text-align: center;
     border-radius: 8px;
     padding: 8px;
     overflow: hidden;
   }
-  .cards_hogar .imagen_product img {
-    width: auto;
+  .cards_section .imagen_product img {
+    width: 30px;
     margin-top: 8vh;
   }
-  .cards_hogar p {
+  .cards_section p {
     text-align: center;
     overflow: hidden;
     white-space: normal;
@@ -412,7 +414,7 @@ footer .footer_social-img {
     align-items: center;
   }
   .gallery .gallery_images img {
-    width: 90%;
+    width: 119%;
     height: auto;
     margin-bottom: 20px;
     padding: 20px;
@@ -469,6 +471,24 @@ footer .footer_social-img {
     align-items: center;
     gap: 40px;
     color: #E86424;
+  }
+  .cards_section .card {
+    flex: 0 0 auto;
+    width: 600px;
+    scroll-snap-align: start;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+  }
+  .cards_section .imagen_product img {
+    width: 100%;
+    margin-top: 8vh;
+  }
+  .cards_section p {
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;
   }
   .gallery .gallery_images {
     display: flex;
