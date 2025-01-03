@@ -187,9 +187,6 @@ section {
         object-fit: cover;
     }
 
-
-
-
     .product_hogar {
         @extend .product_salud;
 
@@ -329,6 +326,115 @@ footer {
     }
 }
 
+@media (min-width: 820px) and (max-width: 1368px) {
+
+
+    article {
+        flex-direction: column;
+        text-align: center;
+
+        .main_information {
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 2.4rem;
+        }
+
+        button {
+            width: auto;
+            font-size: 1.4rem;
+        }
+
+        .main_img img {
+            width: 50vw;
+        }
+    }
+
+
+    .section_products {
+        padding: 10px;
+        width: 100%;
+
+        h2 {
+            padding-bottom: 40rem;
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    .cards_section {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            height: 1px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 45rem;
+            scroll-snap-align: start;
+            text-align: center;
+            border-radius: 8px;
+            padding: 8px;
+            // overflow: hidden;
+        }
+
+        .imagen_product img {
+            width: 80%;
+            margin-top: 8vh;
+        }
+
+        p {
+            text-align: center;
+            overflow: hidden;
+            white-space: normal;
+        }
+    }
+
+    .gallery {
+        .gallery_images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width:90%;
+                height: auto;
+                margin-bottom: 20px;
+                padding: 15px;
+            }
+        }
+
+    }
+
+  }
 // Breakpoint para tablets (pantallas medianas)
 @media (max-width: 768px) {
     nav {

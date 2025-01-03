@@ -273,6 +273,90 @@ footer .footer_social-img {
   padding-bottom: 20px;
 }
 
+@media (min-width: 820px) and (max-width: 1368px) {
+  article {
+    flex-direction: column;
+    text-align: center;
+  }
+  article .main_information {
+    align-items: center;
+    padding-top: 5rem;
+  }
+  article h1 {
+    font-size: 3.5rem;
+  }
+  article p {
+    font-size: 2.4rem;
+  }
+  article button {
+    width: auto;
+    font-size: 1.4rem;
+  }
+  article .main_img img {
+    width: 50vw;
+  }
+  .section_products {
+    padding: 10px;
+    width: 100%;
+  }
+  .section_products h2 {
+    padding-bottom: 40rem;
+    font-size: 3rem;
+  }
+  .section_products h2 {
+    font-size: 3rem;
+  }
+  .cards_section {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cards_section::-webkit-scrollbar {
+    height: 1px;
+  }
+  .cards_section::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  .cards_section::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .cards_section .card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 45rem;
+    scroll-snap-align: start;
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  .cards_section .imagen_product img {
+    width: 80%;
+    margin-top: 8vh;
+  }
+  .cards_section p {
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;
+  }
+  .gallery .gallery_images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery .gallery_images img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+}
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
