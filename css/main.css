@@ -124,7 +124,7 @@ section .card {
   position: relative;
   min-width: 53px;
   max-width: 250px;
-  height: 450px;
+  height: 200px;
   background-color: #FFDAC6;
   color: #7C6A0A;
   padding: 20px;
@@ -366,7 +366,6 @@ footer .footer_social-img {
     font-size: 3rem;
   }
   .cards_section {
-    width: 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -392,7 +391,8 @@ footer .footer_social-img {
   }
   .cards_section .card {
     flex: 0 0 auto;
-    width: 255px;
+    width: 200px;
+    height: auto;
     scroll-snap-align: start;
     text-align: center;
     border-radius: 8px;
@@ -400,7 +400,7 @@ footer .footer_social-img {
     overflow: hidden;
   }
   .cards_section .imagen_product img {
-    width: 30px;
+    width: 90%;
     margin-top: 8vh;
   }
   .cards_section p {
@@ -414,7 +414,7 @@ footer .footer_social-img {
     align-items: center;
   }
   .gallery .gallery_images img {
-    width: 119%;
+    width: 110%;
     height: auto;
     margin-bottom: 20px;
     padding: 20px;
@@ -431,94 +431,5 @@ footer .footer_social-img {
     align-items: center;
     gap: 20px;
     color: #E86424;
-  }
-}
-@media (max-width: 480px) {
-  nav {
-    padding: 1rem;
-  }
-  nav p {
-    font-size: 1.5rem;
-  }
-  nav .icons {
-    gap: 10px;
-  }
-  article {
-    padding: 1rem;
-  }
-  article h1 {
-    font-size: 2.5rem;
-  }
-  article p {
-    font-size: 2rem;
-  }
-  article button {
-    width: 100%;
-    font-size: 2rem;
-  }
-  article .main_img img {
-    width: 90%;
-  }
-  .nosotros .mission_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .nosotros .mission_section .earth, .nosotros .mission_section .innovation {
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    color: #E86424;
-  }
-  .cards_section .card {
-    flex: 0 0 auto;
-    width: 600px;
-    scroll-snap-align: start;
-    text-align: center;
-    border-radius: 8px;
-    padding: 8px;
-    overflow: hidden;
-  }
-  .cards_section .imagen_product img {
-    width: 100%;
-    margin-top: 8vh;
-  }
-  .cards_section p {
-    text-align: center;
-    overflow: hidden;
-    white-space: normal;
-  }
-  .gallery .gallery_images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .gallery .gallery_images img {
-    width: 90%;
-    height: auto;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  footer .footer_servicios {
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  footer .footer_social-img {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-  footer .footer_social-img img {
-    width: 16px;
   }
 }/*# sourceMappingURL=main.css.map */

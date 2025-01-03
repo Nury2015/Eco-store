@@ -46,9 +46,9 @@
       <div class="main_information">
         <h1>Impacto ecológico</h1>
         <p>
-          Debido al impacto ambiental siendo las acciones 
-          humanas las que modifican el ambiente, Eco-store 
-          se compromete a elaborar sus productos de manera 
+          Debido al impacto ambiental siendo las acciones
+          humanas las que modifican el ambiente, Eco-store
+          se compromete a elaborar sus productos de manera
           artesanal y con materiales que favorecen al cuidado
           del medio ambiente.
         </p>
@@ -156,11 +156,11 @@
               <img src="assets/img/furniture/wood-chair.jpg"
                 alt="una silla con patas de madera y espaldar blanco redondo, al lado se muestra una planta, con una base en madera, y matera blanca">
             </div>
-            <h3>Silla de bambú</h3>
-            <p>
-
-              Disponible en 2 colores: blanco y negro, acabado de bambú.
-            </p>
+              <h3>Silla de bambú</h3>
+              <p>
+                Disponible en 2 colores: blanco y negro, acabado de bambú.
+              </p>
+        
           </div>
 
           <div class="card">
@@ -329,24 +329,24 @@
   </footer>
 
   <script>
-    window.onload = function() {
-const cardsContainer = document.querySelector('.cards_section');
-const cards = document.querySelectorAll('.card');
+    window.onload = function () {
+      const cardsContainer = document.querySelector('.cards_section');
+      const cards = document.querySelectorAll('.card');
 
-// Encuentra la tarjeta del medio
-const middleIndex = Math.floor(cards.length / 2);
-const middleCard = cards[middleIndex];
+      // Encuentra la tarjeta del medio
+      const middleIndex = Math.floor(cards.length / 2);
+      const middleCard = cards[middleIndex];
 
-// Calcula el desplazamiento para centrar la tarjeta del medio
-const scrollPosition = middleCard.offsetLeft - (cardsContainer.clientWidth / 2) + (middleCard.clientWidth / 2);
+      // Calcula el desplazamiento para centrar la tarjeta del medio
+      const scrollPosition = middleCard.offsetLeft - (cardsContainer.clientWidth / 2) + (middleCard.clientWidth / 2);
 
-// Aplica el scroll
-cardsContainer.scrollTo({
-left: scrollPosition,
-behavior: 'smooth' // Desplazamiento suave al cargar
-});
-};
-</script>
+      // Aplica el scroll
+      cardsContainer.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth' // Desplazamiento suave al cargar
+      });
+    };
+  </script>
 </body>
 
 </html>

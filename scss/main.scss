@@ -153,7 +153,7 @@ section {
         position: relative;
         min-width: 53px;
         max-width: 250px;
-        height: 450px;
+        height: 200px;
         background-color: $secondary-color;
         color: $primary-text-color;
         padding: 20px;
@@ -447,7 +447,7 @@ footer {
     }
 
     .cards_section {
-        width: 300px;
+        // width:600px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -477,7 +477,8 @@ footer {
 
         .card {
             flex: 0 0 auto;
-            width: 255px;
+            width: 200px;
+            height: auto;
             scroll-snap-align: start;
             text-align: center;
             border-radius: 8px;
@@ -486,7 +487,7 @@ footer {
         }
 
         .imagen_product img {
-            width:30px;
+            width:90%;
             margin-top: 8vh;
         }
 
@@ -498,7 +499,27 @@ footer {
 
     }
 
+//     @media (max-width:640px) {
 
+// .section_products{
+
+//     .product_salud{
+//         height:auto;
+//     }
+// }
+    
+// .card{
+//     width: 250px;
+// }
+
+// .imagen_product  img{
+
+//     width: 100%;
+//     height: auto;
+//     border-radius: 20px;  
+//     object-fit: cover;
+// }
+//     }
 
     .gallery {
         .gallery_images {
@@ -540,143 +561,125 @@ footer {
 
 
     // Breakpoint para móviles (pantallas pequeñas)
-    @media (max-width: 480px) {
-        nav {
-            padding: 1rem;
+//     @media (max-width: 480px) {
+//         nav {
+//             padding: 1rem;
 
-            p {
-                font-size: 1.5rem;
-            }
+//             p {
+//                 font-size: 1.5rem;
+//             }
 
-            .icons {
-                gap: 10px;
-            }
-        }
+//             .icons {
+//                 gap: 10px;
+//             }
+//         }
 
-        article {
-            padding: 1rem;
+//         article {
+//             padding: 1rem;
 
-            h1 {
-                font-size: 2.5rem;
-            }
+//             h1 {
+//                 font-size: 2.5rem;
+//             }
 
-            p {
-                font-size: 2rem;
-            }
+//             p {
+//                 font-size: 2rem;
+//             }
 
-            button {
-                width: 100%;
-                font-size: 2rem;
-            }
+//             button {
+//                 width: 100%;
+//                 font-size: 2rem;
+//             }
 
-            .main_img img {
-                width: 90%;
-            }
-        }
+//             .main_img img {
+//                 width: 90%;
+//             }
+//         }
     
 
-    .nosotros {
+//     .nosotros {
 
-        .mission_section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-
-            .earth {
-                width: 60vw;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 40px;
-                color: #E86424;
-            }
-
-        }
-    }
-
-    .cards_section{
-
-        .card {
-            flex: 0 0 auto;
-            width: 600px;
-            scroll-snap-align: start;
-            text-align: center;
-            border-radius: 8px;
-            padding: 8px;
-            overflow: hidden;
-        }
-
-        .imagen_product img {
-            width:100%;
-            margin-top: 8vh;
-        }
-
-        p {
-            text-align: center;
-            overflow: hidden;
-            white-space: normal;
-        }
-
-    }
+//         .mission_section {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
 
 
-    .gallery {
-        .gallery_images {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+//             .earth {
+//                 width: 60vw;
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 gap: 40px;
+//                 color: #E86424;
+//             }
 
-            img {
-                width: 105%;
-                height: auto;
-                margin-bottom: 20px;
-                padding: 20px;
-            }
-        }
+//         }
+//     }
 
-    }
+//     .cards_section{
 
-    footer {
+//         .card {
+//             flex: 0 0 auto;
+//             width: 600px;
+//             scroll-snap-align: start;
+//             text-align: center;
+//             border-radius: 8px;
+//             padding: 8px;
+//             overflow: hidden;
+//         }
 
-        .footer_servicios{
-        display: flex;
-        justify-content: center;
-        font-family: Arial, Helvetica, sans-serif;
-        padding-bottom: 20px;
-        text-align: center;
-        font-size: 1rem;
-        @include flexCenter(column, center, center);
-        }
+//         .imagen_product img {
+//             width:100%;
+//             margin-top: 8vh;
+//         }
 
-        .footer_social-img {
-             display: flex;
-             flex-direction: row;
-             gap: 20px;
+//         p {
+//             text-align: center;
+//             overflow: hidden;
+//             white-space: normal;
+//         }
+
+//     }
+
+
+//     .gallery {
+//         .gallery_images {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+
+//             img {
+//                 width: 149%;
+//                 height: auto;
+//                 margin-bottom: 20px;
+//                 padding: 20px;
+//             }
+//         }
+
+//     }
+
+//     footer {
+
+//         .footer_servicios{
+//         display: flex;
+//         justify-content: center;
+//         font-family: Arial, Helvetica, sans-serif;
+//         padding-bottom: 20px;
+//         text-align: center;
+//         font-size: 1rem;
+//         @include flexCenter(column, center, center);
+//         }
+
+//         .footer_social-img {
+//              display: flex;
+//              flex-direction: row;
+//              gap: 20px;
            
-        }
+//         }
 
-        .footer_social-img  img{
-            width: 16px;
-        }
-    }
+//         .footer_social-img  img{
+//             width: 16px;
+//         }
+//     }
 
-}
-
-
-@media (max-width: 412px) {
-
-    font-size: 14px;
-    padding: 10px;
-
-    .card {
-        width: 90%; /* Más ancho para aprovechar el espacio */
-        font-size: 14px;
-        padding: 12px;
-      }
-
-      .main {
-        padding: 10px;
-        gap: 10px;
-      }
-}
+// }
