@@ -153,7 +153,7 @@ section {
         position: relative;
         min-width: 53px;
         max-width: 250px;
-        height: 200px;
+        height: auto;
         background-color: $secondary-color;
         color: $primary-text-color;
         padding: 20px;
@@ -326,7 +326,7 @@ footer {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (max-width: 900px){
 
 
     article {

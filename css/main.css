@@ -124,7 +124,7 @@ section .card {
   position: relative;
   min-width: 53px;
   max-width: 250px;
-  height: 200px;
+  height: auto;
   background-color: #FFDAC6;
   color: #7C6A0A;
   padding: 20px;
@@ -273,7 +273,7 @@ footer .footer_social-img {
   padding-bottom: 20px;
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (max-width: 900px) {
   article {
     flex-direction: column;
     text-align: center;
