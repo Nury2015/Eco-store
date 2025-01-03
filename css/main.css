@@ -273,7 +273,7 @@ footer .footer_social-img {
   padding-bottom: 20px;
 }
 
-@media (min-width: 820px) and (max-width: 1368px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   article {
     flex-direction: column;
     text-align: center;
