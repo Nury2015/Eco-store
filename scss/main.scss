@@ -55,6 +55,11 @@ nav {
 }
 
 
+main{
+    padding: 0;
+ }
+
+
 article {
     @include flexCenter(row, space-between, center);
     width: auto;
@@ -78,6 +83,7 @@ article {
         max-width: 600px;
         font-size: 3rem;
         text-align: justify;
+        word-spacing: -1px;
     }
 
     @include buttonStyle;
@@ -451,7 +457,16 @@ footer {
         }
     }
 
+ main{
+    padding: 0;
+ }
+
+
+
+
     article {
+        width: 300px;
+        
         flex-direction: column;
         text-align: center;
 
@@ -466,6 +481,7 @@ footer {
 
         p {
             font-size: 2.4rem;
+            word-spacing: -1px;
         }
 
         button {
@@ -578,6 +594,7 @@ footer {
             text-align: center;
             overflow: hidden;
             white-space: normal;
+            word-spacing: -1px;
         }
 
     }
@@ -633,6 +650,11 @@ footer {
                 gap: 10px;
             }
         }
+
+        main{
+            padding: 0;
+         }
+        
 
         article {
             // padding: 1rem;
