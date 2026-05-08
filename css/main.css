@@ -628,7 +628,132 @@ footer .footer_social-img {
   footer .footer_social-img img {
     width: 16px;
   }
-}/* ── Product modal ── */
+}/* ── Scroll animations ── */
+.animate {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Filter bar ── */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 3rem 1rem 0.5rem;
+  flex-wrap: wrap;
+}
+.filter_btn {
+  padding: 0.8rem 2.5rem;
+  border: 2px solid #7C6A0A;
+  background: none;
+  color: #7C6A0A;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.15s;
+}
+.filter_btn:hover {
+  background-color: #7C6A0A;
+  color: white;
+  transform: scale(1.05);
+}
+.filter_btn.filter_btn_active {
+  background-color: #7C6A0A;
+  color: white;
+}
+
+/* ── Toast ── */
+#toast_container {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  pointer-events: none;
+}
+.toast {
+  background-color: #7C6A0A;
+  color: white;
+  padding: 1.2rem 2rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 280px;
+}
+.toast.toast_visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.toast.toast_info {
+  background-color: #E86424;
+}
+
+/* ── Footer links ── */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── Cart qty controls inside drawer ── */
+.cart_item_qty {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.cart_qty_btn {
+  background-color: #7C6A0A;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+.cart_qty_btn:hover {
+  background-color: #FA9500;
+}
+.cart_item_qty span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* ── Wishlist nav badge ── */
+.nav_wishlist {
+  position: relative;
+}
+
+/* ── Heart active (filled) ── */
+section .heart.heart_active {
+  background-image: url("../assets/svg/heart-filled.svg");
+}
+
+/* ── Product modal ── */
 .modal_overlay {
   display: none;
   position: fixed;
