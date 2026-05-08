@@ -102,12 +102,12 @@ section h2 {
 section h3 {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
-  font-size: medium;
+  font-size: 1.8rem;
 }
 section p {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
-  font-size: small;
+  font-size: 1.4rem;
 }
 section .product_salud h2, section .product_hogar h2 {
   padding-bottom: 60px;
@@ -135,6 +135,13 @@ section .card {
   border-radius: 6px;
   text-align: center;
   background-size: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+section .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 section .heart {
   color: #7C6A0A;
@@ -150,7 +157,7 @@ section .heart {
 }
 section .imagen_product img {
   margin-top: 5vh;
-  min-width: 16vw;
+  width: 100%;
   max-height: 50vh;
   background-size: cover;
   background-position: center;
@@ -252,6 +259,36 @@ section .product_hogar .card p {
 .info_encuentranos h3,
 .info_encuentranos p {
   font-size: 2rem;
+}
+
+.section_cta {
+  background-color: #7C6A0A;
+  text-align: center;
+  padding: 7rem 2rem;
+}
+.section_cta h2 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+.section_cta p {
+  color: #FFDAC6;
+  font-size: 2rem;
+  margin: 0 0 3rem;
+}
+.section_cta .cta_button {
+  background-color: #FA9500;
+  color: white;
+  border: none;
+  padding: 1.5rem 4rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.section_cta .cta_button:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -591,4 +628,210 @@ footer .footer_social-img {
   footer .footer_social-img img {
     width: 16px;
   }
-}/*# sourceMappingURL=main.css.map */
+}/* ── Cart badge ── */
+.nav_cart {
+  position: relative;
+}
+.cart_badge {
+  display: none;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #E86424;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* ── Card price & add button ── */
+.card_price {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0.8rem 0 0;
+}
+.btn_add_cart {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #7C6A0A;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn_add_cart:hover {
+  background-color: #FA9500;
+  transform: scale(1.03);
+}
+.product_hogar .btn_add_cart {
+  background-color: white;
+  color: #7C6A0A;
+}
+.product_hogar .btn_add_cart:hover {
+  background-color: #FA9500;
+  color: white;
+}
+.product_hogar .card_price {
+  color: white;
+}
+
+/* ── Cart overlay ── */
+.cart_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.cart_overlay.open {
+  display: block;
+}
+
+/* ── Cart drawer ── */
+.cart_drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  max-width: 100vw;
+  height: 100%;
+  background: #FFEFE7;
+  z-index: 101;
+  transition: right 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+}
+.cart_drawer.open {
+  right: 0;
+}
+.cart_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 2px solid #FFDAC6;
+  color: #7C6A0A;
+}
+.cart_header h3 {
+  font-size: 2.2rem;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.cart_close {
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #7C6A0A;
+  line-height: 1;
+  padding: 0;
+}
+.cart_items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.cart_empty {
+  text-align: center;
+  color: #7C6A0A;
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  opacity: 0.7;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.cart_item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.cart_item img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.cart_item_info {
+  flex: 1;
+  min-width: 0;
+}
+.cart_item_info p {
+  margin: 0 0 0.3rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cart_item_info span {
+  font-size: 1.3rem;
+  color: #E86424;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.cart_item_remove {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #7C6A0A;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+  padding: 0.4rem;
+}
+.cart_item_remove:hover {
+  opacity: 1;
+}
+.cart_footer {
+  padding: 1.5rem 2rem;
+  border-top: 2px solid #FFDAC6;
+}
+.cart_total_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #7C6A0A;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.cart_checkout {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #FA9500;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.cart_checkout:hover {
+  transform: scale(1.03);
+}
+/*# sourceMappingURL=main.css.map */
