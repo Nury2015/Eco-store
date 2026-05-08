@@ -355,6 +355,26 @@
     </div>
   </footer>
 
+  <div class="modal_overlay" id="modal_overlay">
+    <div class="modal_product" id="modal_product">
+      <button class="modal_close" id="modal_close">✕</button>
+      <div class="modal_img">
+        <img id="modal_img" src="" alt="">
+      </div>
+      <div class="modal_info">
+        <h2 id="modal_name"></h2>
+        <p class="modal_desc" id="modal_desc"></p>
+        <p class="modal_price" id="modal_price"></p>
+        <div class="modal_qty">
+          <button class="qty_btn" id="qty_minus">−</button>
+          <span class="qty_value" id="qty_value">1</span>
+          <button class="qty_btn" id="qty_plus">+</button>
+        </div>
+        <button class="modal_add_cart" id="modal_add_cart">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+
   <div class="cart_overlay" id="cart_overlay"></div>
   <aside class="cart_drawer" id="cart_drawer">
     <div class="cart_header">
@@ -429,6 +449,16 @@
     document.getElementById('cart_close').addEventListener('click', closeCart);
     document.getElementById('cart_overlay').addEventListener('click', closeCart);
 
+    document.querySelector('.cart_checkout').addEventListener('click', () => {
+      if (cart.length === 0) return;
+      const lines = cart.map(item =>
+        `• ${item.name} x${item.qty}: $${(item.price * item.qty).toLocaleString('es-CO')}`
+      ).join('\n');
+      const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const message = `Hola, me gustaría realizar el siguiente pedido:\n\n${lines}\n\nTotal: $${total.toLocaleString('es-CO')}`;
+      window.open(`https://wa.me/573154380079?text=${encodeURIComponent(message)}`, '_blank');
+    });
+
     document.getElementById('cart_items').addEventListener('click', e => {
       if (e.target.classList.contains('cart_item_remove')) {
         const index = parseInt(e.target.closest('.cart_item').dataset.index);
@@ -438,7 +468,8 @@
     });
 
     document.querySelectorAll('.btn_add_cart').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
         addToCart(btn.dataset.name, parseInt(btn.dataset.price), btn.dataset.image);
         const original = btn.textContent;
         btn.textContent = '✓ Agregado';
@@ -448,6 +479,69 @@
           btn.style.backgroundColor = '';
         }, 1200);
       });
+    });
+
+    // Product modal
+    let currentProduct = null;
+    let currentQty = 1;
+
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', e => {
+        if (e.target.closest('.btn_add_cart') || e.target.closest('.heart')) return;
+        const btn = card.querySelector('.btn_add_cart');
+        if (!btn) return;
+        const img = card.querySelector('.imagen_product img');
+        const name = card.querySelector('h3').textContent.trim();
+        const desc = card.querySelector('p:not(.card_price)').textContent.trim();
+        const price = parseInt(btn.dataset.price);
+
+        currentProduct = { name, price, image: btn.dataset.image };
+        currentQty = 1;
+
+        document.getElementById('modal_img').src = img.src;
+        document.getElementById('modal_img').alt = name;
+        document.getElementById('modal_name').textContent = name;
+        document.getElementById('modal_desc').textContent = desc;
+        document.getElementById('modal_price').textContent = '$' + price.toLocaleString('es-CO');
+        document.getElementById('qty_value').textContent = 1;
+        document.getElementById('modal_add_cart').textContent = 'Agregar al carrito';
+        document.getElementById('modal_add_cart').style.backgroundColor = '';
+        document.getElementById('modal_overlay').classList.add('open');
+      });
+    });
+
+    function closeModal() {
+      document.getElementById('modal_overlay').classList.remove('open');
+    }
+
+    document.getElementById('modal_close').addEventListener('click', closeModal);
+    document.getElementById('modal_overlay').addEventListener('click', e => {
+      if (e.target === document.getElementById('modal_overlay')) closeModal();
+    });
+
+    document.getElementById('qty_minus').addEventListener('click', () => {
+      if (currentQty > 1) {
+        currentQty--;
+        document.getElementById('qty_value').textContent = currentQty;
+      }
+    });
+
+    document.getElementById('qty_plus').addEventListener('click', () => {
+      currentQty++;
+      document.getElementById('qty_value').textContent = currentQty;
+    });
+
+    document.getElementById('modal_add_cart').addEventListener('click', () => {
+      if (!currentProduct) return;
+      for (let i = 0; i < currentQty; i++) {
+        addToCart(currentProduct.name, currentProduct.price, currentProduct.image);
+      }
+      const btn = document.getElementById('modal_add_cart');
+      btn.textContent = '✓ Agregado';
+      btn.style.backgroundColor = '#5a8a3c';
+      setTimeout(() => {
+        closeModal();
+      }, 900);
     });
 
     window.onload = function () {
