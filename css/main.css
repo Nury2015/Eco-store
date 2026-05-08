@@ -371,11 +371,17 @@ footer .footer_social-img {
   .cards_section .card {
     flex: 0 0 auto;
     width: 200px;
-    height: 45rem;
+    min-height: 45rem;
+    height: auto;
     scroll-snap-align: start;
     text-align: center;
     border-radius: 8px;
     padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cards_section .card .btn_add_cart {
+    margin-top: auto;
   }
   .cards_section .imagen_product img {
     width: 80%;
@@ -469,11 +475,17 @@ footer .footer_social-img {
   section .cards_section .card {
     flex: 0 0 auto;
     width: 200px;
-    height: 45rem;
+    min-height: 45rem;
+    height: auto;
     scroll-snap-align: start;
     text-align: center;
     border-radius: 8px;
     padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  section .cards_section .card .btn_add_cart {
+    margin-top: auto;
   }
   section .cards_section .imagen_product img {
     width: 80%;
